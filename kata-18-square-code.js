@@ -1,8 +1,10 @@
 const squareCode = message => {
   let result = "";
-  noSpaces = message.split(" ").join("");
+  let noSpaces = message.split(" ").join("");
+
   //Find the length of our individual "words"
-  const wordLength = Math.ceil(Math.sqrt(noSpaces.length)); 
+  const wordLength = Math.ceil(Math.sqrt(noSpaces.length));
+
   for (let i = 0; i < wordLength; i++) {
     for (let j = i; j < noSpaces.length; j += wordLength) {
       result += noSpaces[j];
